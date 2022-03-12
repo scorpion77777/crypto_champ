@@ -1,0 +1,42 @@
+{
+  "name": "cryptochamps",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server.js",
+  "scripts": {
+    "build": "postcss public/css/styles.css -o public/build/styles.css --watch",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js",
+    "seed": "node seeds/index.js",
+    "naji-clean": "rm -rf node_modules package-lock.json && npm i"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/veidul/CryptoChamps.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/veidul/CryptoChamps/issues"
+  },
+  "homepage": "https://github.com/veidul/CryptoChamps#readme",
+  "dependencies": {
+    "@tailwindcss/forms": "^0.4.0",
+    "autoprefixer": "^10.4.2",
+    "axios": "^0.24.0",
+    "bcrypt": "^5.0.1",
+    "connect-session-sequelize": "^7.1.2",
+    "dotenv": "^10.0.0",
+    "eslint": "^8.6.0",
+    "express": "^4.17.2",
+    "express-handlebars": "^6.0.2",
+    "express-session": "^1.17.2",
+    "moment": "^2.29.1",
+    "mysql2": "^2.3.3",
+    "postcss": "^8.4.5",
+    "postcss-cli": "^9.1.0",
+    "sequelize": "^6.12.5",
+    "tailwindcss": "^3.0.13"
+  }
+}

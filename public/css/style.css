@@ -1,0 +1,80 @@
+* {
+  font-family: 'Bebas Neue', cursive;
+  font-family: 'Teko', sans-serif;
+
+}
+
+body {
+  background-image: url('../imgs/background.jpg');
+  color: whitesmoke;
+ }
+div {
+  font-size: medium;
+}
+h1, h2 {
+  font-weight: bold;
+}
+.login {
+  font-size: 30px;
+}
+
+header,
+.project:not(:last-child) {
+  font-weight: bold;
+  border-bottom: 1px solid #ccc;
+}
+img {
+  border-radius: 100%;
+}
+.img-container{
+  display:flex;
+  width:100px;
+  height: 100px;
+  object-fit: contain;
+}
+
+.no-button {
+  background: none;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+  color: #1b89bc;
+  text-decoration: none;
+  font-size: 100%;
+}
+
+.no-button:hover {
+  color: #065b83;
+  text-decoration: underline;
+}
+
+.dollar-amount {
+  color: #056605;
+  font-weight: bold;
+  margin-left: -5px;
+}
+.wrapper{
+  display:flex;
+  justify-content:space-between;
+}
+.coin-container{
+  display:flex;
+  float:left;
+}
+.wallet-container{
+  height: 600px;
+  width: 300px;
+  border: 2px solid white;
+  float: right
+}
+.float-child {
+  width: 50%;
+  float: left;
+  padding-left: 20px;
+  padding-right: 20px;
+  padding: 20px,;
+  border: 2px solid white;
+}  
+.tourney-container {
+  border: 2px solid white;
+}

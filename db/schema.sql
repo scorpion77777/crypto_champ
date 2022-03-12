@@ -1,0 +1,2 @@
+DROP DATABASE IF EXISTS cryptos_db;
+CREATE DATABASE cryptos_db;

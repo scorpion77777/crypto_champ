@@ -1,0 +1,37 @@
+{{!current tournament list }}
+<div class="tourney-container">
+  <h1>Your Tournaments</h1>
+  {{#each tourneyLiveData as |live|}}
+    <div style="outline: 2px solid white;">
+
+      <h2>Tournament Id: {{live.tourney_id}}</h2>
+      <h3>Start Time: {{format_date live.startTime}}</h3>
+      <button
+        onclick="location.href = '/tournament/view/?tourney={{live.tourney_id}}'"
+        class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded"
+        data-id:
+        {{live.tourney_id}}
+      >View Tournament</button></div>
+  {{/each}}
+</div>
+{{! join/create tournament list }}
+<div class="tourney-container" style="padding-top: 20px">
+  <h1>Upcoming Tournaments</h1>
+
+  {{#each upcomingFiltered as |up|}}
+    <div style="outline: 2px solid white;">
+      <h2>Tournament Id: {{up.id}}</h2>
+      <h3>Start Time: {{format_date up.startTime}}</h3>
+      <button
+        onclick="location.href = '/tournament?id={{up.id}}';"
+        type="submit"
+        class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded"
+      >Join Tournament</button></div>
+  {{/each}}
+
+  <button
+    onclick="location.href = '/tournament';"
+    type="submit"
+    class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded"
+  >Create A Tournament</button>
+</div>

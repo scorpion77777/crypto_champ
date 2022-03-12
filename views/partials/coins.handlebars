@@ -1,0 +1,45 @@
+{{#each coins as |coin|}}
+  <div class="card float-child" style="width: 18rem;">
+    <br />
+    <div class="img-container">
+      <img class="card-image" src="{{coin.img}}" alt="Avatar" />
+    </div>
+    <div class="card-body">
+    </div>
+    <div class="card-body coinContainer">
+      <h1 class="card-title">{{coin.name}}</h5>
+      <h2 class="card-ticker">{{coin.ticker}}</h6>
+      <div class="form-group">
+        <p>Current Price <br /></p>
+        <p class="currentPrice">${{coin.currentPrice}}</p>
+        <label for="coin-quantity">Quantity: </label>
+        <input
+          class="form-input quantity"
+          type="number"
+          min="0"
+          step="any"
+          name="quantity"
+          onchange="updateCost(event)"
+          data-price={{coin.currentPrice}}
+          default="0"
+          id="{{coin.ticker}}-quantity"
+          style= "color:black"
+        />
+        <div class="cost">Total Cost: </div>
+        <div class="cost-output">0</div>
+      </div>
+      <button
+        type="submit"
+        class="coin bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded"
+        data-price={{coin.currentPrice}}
+        data-ticker={{coin.ticker}}
+        onClick="addToWallet(event)"
+      >Add to Wallet</button>
+    </div>
+  </div>
+  <style>
+    div, p, label{
+      font-size: 25px;
+    }
+  </style>
+{{/each}}
